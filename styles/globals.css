@@ -10,7 +10,7 @@ body {
 	padding: 0;
 	overflow-x: hidden;
 	color: var(--black);
-	background: #e5e5e5;
+	background: #f5f6f8;
 }
 
 a {
@@ -20,8 +20,10 @@ a {
 
 :root {
 	--black: #3b434e;
+	--gray-light: #ebebeb;
 	--white: white;
 	--primary: #7653fc;
+	--primary-hover: #5c34fa;
 	--red: #de0000;
 	--green: #1dc37e;
 	--green-light: #c8f8e4;
