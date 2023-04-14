@@ -17,7 +17,7 @@ export interface HhData {
 	juniorSalary: number;
 	middleSalary: number;
 	seniorSalary: number;
-	updateAt: Date;
+	updatedAt: Date;
 }
 
 export interface TopPageModel {

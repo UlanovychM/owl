@@ -3,7 +3,7 @@ export interface ProductCharacteristic {
 	name: string;
 }
 
-export interface ReviewsModule {
+export interface ReviewModel {
 	_id: string;
 	name: string;
 	title: string;
@@ -22,15 +22,15 @@ export interface ProductModel {
 	credit: number;
 	oldPrice: number;
 	description: string;
-	metaDescription: ProductCharacteristic[];
+	characteristics: ProductCharacteristic[];
 	createdAt: Date;
 	updatedAt: Date;
 	__v: number;
 	image: string;
 	initialRating: number;
-	reviews: ReviewsModule[];
+	reviews: ReviewModel[];
 	reviewCount: number;
-	reviewAVG?: number;
+	reviewAvg?: number;
 	advantages?: string;
 	disadvantages?: string;
 }
