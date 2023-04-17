@@ -138,15 +138,8 @@
 	margin-bottom: 5px;
 }
 
-.closed {
+.review {
 	overflow: hidden;
-	max-height: 0;
-	padding: 0;
-}
-
-.closed {
-	overflow: hidden;
-	max-height: auto;
 	padding: 30px;
 }
 
