@@ -14,12 +14,28 @@
 	grid-area: header;
 }
 
+.skipLink {
+	display: block;
+	position: fixed;
+	left: 100px;
+	top: 0;
+	overflow: hidden;
+	height: 0;
+	background: var(--primary);
+	color: var(--white);
+}
+
+.displayed {
+	height: auto;
+}
+
 .sidebar {
 	grid-area: sidebar;
 }
 
 .body {
 	grid-area: body;
+	outline: none;
 }
 
 .footer {
