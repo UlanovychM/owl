@@ -16,6 +16,7 @@ import { useState } from 'react';
 export const ReviewForm = ({
 	productID,
 	className,
+	isOpened,
 	...props
 }: ReviewFormProps): JSX.Element => {
 	const {
@@ -59,6 +60,7 @@ export const ReviewForm = ({
 					})}
 					placeholder="ім'я"
 					error={errors.name}
+					tabIndex={isOpened ? 0 : -1}
 				/>
 				<Input
 					{...register('title', {
@@ -67,6 +69,7 @@ export const ReviewForm = ({
 					className={styles.title}
 					placeholder='Загаловко відгука'
 					error={errors.title}
+					tabIndex={isOpened ? 0 : -1}
 				/>
 				<div className={styles.rating}>
 					<span>Оцінка:</span>
@@ -83,6 +86,7 @@ export const ReviewForm = ({
 								setRating={field.onChange}
 								ref={field.ref}
 								error={errors.rating}
+								tabIndex={isOpened ? 0 : -1}
 							/>
 						)}
 					/>
@@ -94,9 +98,12 @@ export const ReviewForm = ({
 					placeholder='Текст відгуку'
 					className={styles.description}
 					error={errors.description}
+					tabIndex={isOpened ? 0 : -1}
 				/>
 				<div className={styles.submit}>
-					<Button appearance='primary'>Відправити</Button>
+					<Button appearance='primary' tabIndex={isOpened ? 0 : -1}>
+						Відправити
+					</Button>
 					<span className={styles.info}>
 						* Перед публікацією відгук пройде попередню модерацію і перевірку
 					</span>
