@@ -83,7 +83,7 @@ export const Menu = (): JSX.Element => {
 						m.isOpened = true;
 					}
 					return (
-						<div key={m._id.secondCategory}>
+						<nav key={m._id.secondCategory}>
 							<div
 								tabIndex={0}
 								onKeyDown={(key: KeyboardEvent) =>
@@ -103,7 +103,7 @@ export const Menu = (): JSX.Element => {
 							>
 								{buildThirdLevel(m.pages, menuItem.route, m.isOpened ?? false)}
 							</motion.div>
-						</div>
+						</nav>
 					);
 				})}
 			</div>
@@ -132,5 +132,9 @@ export const Menu = (): JSX.Element => {
 		));
 	};
 
-	return <div className={styles.menu}>{buildFirstLevel()}</div>;
+	return (
+		<nav className={styles.menu} role='navigation'>
+			{buildFirstLevel()}
+		</nav>
+	);
 };
