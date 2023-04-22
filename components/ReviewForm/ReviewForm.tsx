@@ -119,22 +119,28 @@ export const ReviewForm = ({
 				</div>
 			</div>
 			{isSuccess && (
-				<div className={cn(styles.success, styles.panel)}>
+				<div className={cn(styles.success, styles.panel)} role='alert'>
 					<div className={styles.successTitle}>Ваш відгук відправлен</div>
 					<div>Дякую, Ваш відгук буде опублікований після перевіки!</div>
-					<CloseIcon
+					<button
 						className={styles.close}
 						onClick={() => setIsSuccess(false)}
-					/>
+						aria-label='Закрити сповіщення'
+					>
+						<CloseIcon />
+					</button>
 				</div>
 			)}
 			{error && (
-				<div className={cn(styles.error, styles.panel)}>
+				<div className={cn(styles.error, styles.panel)} role='alert'>
 					Шось пішло не так, оновіть сторінку
-					<CloseIcon
+					<button
 						className={styles.close}
 						onClick={() => setError(undefined)}
-					/>
+						aria-label='Закрити сповіщення'
+					>
+						<CloseIcon />
+					</button>
 				</div>
 			)}
 		</form>
