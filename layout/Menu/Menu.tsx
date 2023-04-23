@@ -23,7 +23,7 @@ export const Menu = (): JSX.Element => {
 			transition: shouldReduceMotion
 				? {}
 				: {
-						width: 'beforeChildren',
+						when: 'beforeChildren',
 						staggerChildren: 0.1,
 				  },
 		},
@@ -65,14 +65,14 @@ export const Menu = (): JSX.Element => {
 					<li key={m.route} aria-expanded={m.id == firstCategory}>
 						<Link legacyBehavior href={`/${m.route}`}>
 							<a>
-								<li
+								<div
 									className={cn(styles.firstLevel, {
 										[styles.firstLevelActive]: m.id == firstCategory,
 									})}
 								>
 									{m.icon}
 									<span>{m.name}</span>
-								</li>
+								</div>
 							</a>
 						</Link>
 						{m.id == firstCategory && buildSecondLevel(m)}

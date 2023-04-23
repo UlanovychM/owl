@@ -14,7 +14,7 @@
 	padding: 0;
 }
 
-å .firstLevelActive,
+.firstLevelActive,
 .firstLevel:hover {
 	color: var(--primary);
 }
@@ -70,6 +70,6 @@
 }
 
 .thirdLevelActive,
-.thirdLevelActive:hover {
+.thirdLevel:hover {
 	color: var(--primary);
 }
