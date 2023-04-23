@@ -13,7 +13,7 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
 		id: TopLevelCategory.Courses,
 	},
 	{
-		route: 'Services',
+		route: 'services',
 		name: 'Сервіси',
 		icon: <ServicesIcon />,
 		id: TopLevelCategory.Services,

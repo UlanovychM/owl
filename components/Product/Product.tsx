@@ -50,26 +50,26 @@ export const Product = motion(
 						<div className={styles.title}>{product.title}</div>
 						<div className={styles.price}>
 							<span>
-								<span className={styles.visuallyHidden}>ціна</span>
+								<span className='visuallyHidden'>ціна</span>
 								{priceUa(product.price)}
 							</span>
 
 							{product.oldPrice && (
 								<Tag className={styles.oldPrice} color='green'>
-									<span className={styles.visuallyHidden}>знижка</span>
+									<span className='visuallyHidden'>знижка</span>
 									{priceUa(product.price - product.oldPrice)}
 								</Tag>
 							)}
 						</div>
 						<div className={styles.credit}>
 							<span>
-								<span className={styles.visuallyHidden}>кредит</span>
+								<span className='visuallyHidden'>кредит</span>
 								{priceUa(product.credit)}
 							</span>
 							<span className={styles.month}>/мес.</span>
 						</div>
 						<div className={styles.rating}>
-							<span className={styles.visuallyHidden}>
+							<span className='visuallyHidden'>
 								{'рейтінг' + (product.reviewAvg ?? product.initialRating)}
 							</span>
 							<Rating rating={product.reviewAvg ?? product.initialRating} />
@@ -154,7 +154,7 @@ export const Product = motion(
 									<Divider />
 								</div>
 							))}
-							<ReviewForm productID={product._id} isOpened={isReviewOpened} />
+							<ReviewForm productId={product._id} isOpened={isReviewOpened} />
 						</Card>
 					</motion.div>
 				</div>
