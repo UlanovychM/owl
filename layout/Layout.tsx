@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 		<div className={styles.wrapper}>
 			<a
 				onFocus={() => setIsSkipLinkDisplayed(true)}
-				tabIndex={1}
+				tabIndex={0}
 				className={cn(styles.skipLink, {
 					[styles.displayed]: isSkipLinkDisplayed,
 				})}
@@ -47,13 +47,13 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 };
 
 export const withLayout = <T extends Record<string, unknown> & IAppContext>(
-	Comment: FunctionComponent<T>
+	Component: FunctionComponent<T>
 ) => {
-	return function withLayoutComponent(props: T) {
+	return function withLayoutComponent(props: T): JSX.Element {
 		return (
 			<AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
 				<Layout>
-					<Comment {...props} />
+					<Component {...props} />
 				</Layout>
 			</AppContextProvider>
 		);
